@@ -1,0 +1,109 @@
+/* Course Work Navigation */
+.course-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-top: 25px;
+}
+
+/* Academic Years and Courses */
+.academic-year h2 {
+    font-size: 28px;
+    color: #c4bebc;
+    letter-spacing: 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #303030;
+}
+
+.course {
+    margin-top: 35px;
+}
+
+.course h3 {
+    font-size: 22px;
+    color: #c4bebc;
+}
+
+.course h4 {
+    font-size: 15px;
+    color: #85807e;
+    font-weight: 500;
+}
+
+/* Expandable Labs, Questions and Files */
+.coursework-item {
+    background-color: #171717;
+    border: 1px solid #303030;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 12px;
+    min-width: 0;
+}
+
+.coursework-item summary {
+    cursor: pointer;
+    overflow-wrap: anywhere;
+}
+
+.coursework-item summary:hover {
+    color: #ffffff;
+}
+
+.question-block,
+.source-file {
+    margin-top: 12px;
+    padding: 12px 0;
+    border-top: 1px solid #303030;
+}
+
+.question-text {
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    margin-top: 15px;
+    line-height: 1.6;
+}
+
+.course-note {
+    color: #85807e;
+    font-size: 14px;
+}
+
+/* Source Code */
+.coursework-item pre {
+    background-color: #0c0c0c;
+    padding: 15px;
+    border-radius: 5px;
+    overflow: auto;
+    max-height: 400px;
+}
+
+.coursework-item code {
+    font-family: monospace;
+    font-size: 13px;
+}
+
+/* Other Courses */
+.course-item {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.course-item .role {
+    min-width: 100px;
+}
+
+@media (max-width: 600px) {
+    .course h3 {
+        font-size: 19px;
+    }
+
+    .coursework-item {
+        padding: 12px;
+    }
+
+    .coursework-item pre {
+        padding: 10px;
+    }
+}

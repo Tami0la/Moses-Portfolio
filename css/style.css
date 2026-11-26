@@ -3,33 +3,60 @@ body {
     background-color: #111111;
     color: #b8b2b0;
     font-family: 'DM Sans', sans-serif;
+    line-height: 1.6;
     margin: 0;
 }
 
-/* Main layout */
+/* Main Layout */
 main {
-    max-width: 680px;
+    width: 85%;
     margin: 0 auto;
-    padding: 60px 24px;
+    padding: 50px 0;
 }
 
-/* Introduction */
-.intro h1 {
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding-bottom: 20px;
+    margin-bottom: 45px;
+    border-bottom: 1px solid #303030;
+}
+
+.navbar a {
+    font-size: 14px;
+    color: #85807e;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: #ffffff;
+}
+
+/* Introduction and Page Headings */
+.intro h1,
+.page-header h1 {
     font-family: 'Playfair Display', serif;
     font-style: italic;
     font-size: 54px;
     font-weight: 600;
     color: #c4bebc;
+    line-height: 1.2;
     margin-bottom: 30px;
+    overflow-wrap: break-word;
 }
 
-.intro p {
+.intro p,
+.page-header p {
     font-size: 17px;
     line-height: 1.6;
+    max-width: 900px;
     margin-bottom: 18px;
 }
 
-/* links */
+/* Links */
 a {
     color: #b8b2b0;
     text-decoration: none;
@@ -40,8 +67,7 @@ a:hover {
     color: #ffffff;
 }
 
-/* Section headings */
-
+/* Section Headings */
 section {
     margin-top: 45px;
 }
@@ -54,18 +80,37 @@ section h2 {
     margin-bottom: 20px;
 }
 
-/* work and education */
-.work-item, .education-item {
+section h2 a {
+    color: inherit;
+}
+
+section h2 a:hover {
+    color: #ffffff;
+}
+
+/* Work, Education, Skills and Projects */
+.work-item,
+.education-item,
+.skill-item,
+.project-item,
+.creative-item {
     display: flex;
-    align-items: center;
+    align-items: baseline;
+    flex-wrap: wrap;
     gap: 12px;
     margin-bottom: 17px;
 }
 
-.role {
+.role,
+.project-item span,
+.creative-item span {
     color: #85807e;
     font-family: monospace;
     font-size: 14px;
+}
+
+.skill-item .role {
+    min-width: 150px;
 }
 
 .date {
@@ -74,35 +119,117 @@ section h2 {
     margin-left: auto;
 }
 
-/* Projects */
-.project-item {
+.creative .creative-name {
+    color: #b8b2b0;
+    font-family: inherit;
+    font-size: 16px;
+}
+
+/* Work Experience Page */
+.experience-item {
+    padding-bottom: 25px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #303030;
+}
+
+.experience-date,
+.page-header .location {
+    color: #85807e;
+    font-size: 14px;
+}
+
+.experience-item ul {
+    padding-left: 20px;
+}
+
+.experience-item li {
+    margin-bottom: 10px;
+}
+
+/* Internal Section Headings */
+.experience-item h2,
+.experience-item h3,
+.project-category h2,
+.course-category h2,
+.contact-section h2 {
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: 0;
+    color: #c4bebc;
+}
+
+/* Project and Course Cards */
+.project-card,
+.course-card {
+    border: 1px solid #303030;
+    border-radius: 8px;
+    background-color: #171717;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.project-card h3,
+.course-card h3 {
+    font-size: 18px;
+    font-weight: 500;
+    color: #c4bebc;
+    margin-top: 0;
+}
+
+/* Technology Tags */
+.technologies {
     display: flex;
-    align-items: baseline;
-    gap: 12px;
-    margin-bottom: 15px;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 15px 0;
 }
 
-.project-item span {
-    color: #85807e;
+.technologies span {
+    background-color: #222222;
     font-family: monospace;
-    font-size: 13px;
+    font-size: 12px;
+    padding: 5px 10px;
+    border-radius: 4px;
 }
 
-/* Creative Work */
-.creative p {
-    line-height: 1.6;
+/* Page Links */
+.page-link,
+.back-link {
+    font-size: 14px;
+    text-decoration: underline;
+    margin-right: 15px;
 }
 
-.creative span {
+/* Course Assignments */
+.assignment {
+    margin-top: 20px;
+    padding-left: 15px;
+    border-left: 2px solid #303030;
+}
+
+/* Contact Page */
+.contact-item {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 15px 0;
+    border-bottom: 1px solid #303030;
+}
+
+.contact-item span {
     color: #85807e;
-    font-family: monospace;
-    font-size: 13px;
+}
+
+.contact-item a {
+    overflow-wrap: anywhere;
 }
 
 /* Footer */
 .contact {
     margin-top: 55px;
     display: flex;
+    flex-wrap: wrap;
     gap: 25px;
 }
 
@@ -110,33 +237,60 @@ section h2 {
     font-size: 15px;
 }
 
+/* Images and Videos */
+img, video {
+    max-width: 100%;
+    height: auto;
+}
+
 /* Responsive Design */
 @media (max-width: 600px) {
 
     main {
-        padding: 45px 20px;
+        width: 90%;
+        padding: 30px 0;
     }
 
-    .intro h1 {
-        font-size: 42px;
+    .intro h1,
+    .page-header h1 {
+        font-size: 36px;
     }
 
-    .intro p {
+    .intro p,
+    .page-header p {
         font-size: 15px;
     }
 
-    .work-item,
-    .education-item {
-        flex-wrap: wrap;
+    .navbar {
+        gap: 15px;
+        margin-bottom: 30px;
     }
 
-    .project-item {
+    .navbar a {
+        font-size: 13px;
+    }
+
+    .work-item,
+    .education-item,
+    .skill-item,
+    .project-item,
+    .creative-item,
+    .contact-item {
         flex-direction: column;
-        gap: 3px;
+        gap: 4px;
+    }
+
+    .date {
+        margin-left: 0;
+    }
+
+    .project-card,
+    .course-card {
+        padding: 15px;
     }
 
     .contact {
-        flex-wrap: wrap;
+        gap: 15px;
     }
 
 }
